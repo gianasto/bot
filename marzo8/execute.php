@@ -45,8 +45,9 @@
 		header("Content-Type: application/json");
 		//i parametri sono cosa voglio mandare indietro al mio utente, rimando il testo che
 		//ho ricevuto e che si trova nella variabile $text
-		if $text == "data"{
-			$parameters = array('chat_id' => $chatId, "text" => date);
+		if ($text == "data"){
+			
+			$parameters = array('chat_id' => $chatId, "text" => date("g.m.y"));
 		}
 		else {
 			$parameters = array('chat_id' => $chatId, "text" => $text);
